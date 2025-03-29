@@ -1,0 +1,84 @@
+body {
+    background: black;
+    position: relative;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+#container {
+    color: lime;
+    font-family: monospace;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+a {
+    display: block;
+    margin: 20px;
+    color: lime;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+a:hover {
+    color: red;
+}
+#start {
+    color: lime;
+    border: 2px solid lime;
+    background: transparent;
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    font-family: monospace;
+}
+p {
+    margin: 0;
+    font-size: 3em;
+}
+#reactionButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: lime;
+    color: black;
+    border: none;
+    display: none;
+    font-size: 10em;
+    font-family: monospace;
+}
+#result {
+    margin-top: 20px;
+    font-size: 10em;
+}
+#jumpscare, #jumpscare img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#laughey {
+    animation: zoomIn 0.2s ease-in forwards;
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+#smiley {
+    display: none;
+}
+#hidden {
+    z-index: 1;
+}

@@ -1,0 +1,73 @@
+body {
+    background: black;
+    position: relative;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#container {
+    color: lime;
+    font-family: monospace;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+a {
+    display: block;
+    margin: 20px;
+    color: lime;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+a:hover {
+    color: red;
+}
+a.disabled {
+    pointer-events: none;
+}
+#barContainer {
+    width: 300px;
+    height: 30px;
+    background: #333;
+    position: relative;
+    margin-bottom: 20px;
+}
+#progressBar {
+    width: 0;
+    height: 100%;
+    background: lime;
+}
+#targetLine {
+    position: absolute;
+    left: 90%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: red;
+}
+#message {
+    margin: 10px;
+    font-size: 1.5em
+}
+.glitch-message {
+    position: absolute;
+    color: lime;
+    font-family: monospace;
+    text-shadow: 5px 5px 10px red, -5px -5px 10px blue;
+    pointer-events: none;
+    animation: glitch-flicker 0.3s infinite;
+}
+@keyframes glitch-flicker {
+    0%, 100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translate(2px, -2px) rotate(var(--angle));
+    }
+}
